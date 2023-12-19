@@ -36,9 +36,12 @@ const App = () => {
           {/* Route for Register component */}
           <Route path='/register' element={<Ragisterd />} />
         </Routes>
-      </div>
+      </div> 
     </div>
   );
 }
 
 export default App;
+
+
+
