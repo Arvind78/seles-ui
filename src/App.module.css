@@ -1,0 +1,12 @@
+.cantainer{
+height: 100vh;
+width: 100%;
+}
+.navber{
+height: 60px;
+position: sticky;
+top: 0;
+}
+.routes{
+    height: calc(100vh -60px);
+}

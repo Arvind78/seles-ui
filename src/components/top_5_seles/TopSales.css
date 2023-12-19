@@ -1,0 +1,22 @@
+/* TopSales.css */
+/* Default font size for all cells */
+.font-size-cell {
+    font-size: 13px; /* Default font size */
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 576px) {
+    /* Small devices (576px and below) */
+    .font-size-table .font-size-cell {
+      font-size: 12px; /* Adjust font size for small screens */
+    }
+  }
+  
+  @media (min-width: 577px) and (max-width: 768px) {
+    /* Medium devices (577px to 768px) */
+    .font-size-table .font-size-cell {
+      font-size: 12px; /* Adjust font size for medium screens */
+    }
+  }
+  
+ 

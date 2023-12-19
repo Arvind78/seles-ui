@@ -1,0 +1,17 @@
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+a:active{
+    color: azure;
+}
+
+a{
+    color: rgba(231, 228, 228, 0.808);
+    padding: 0px 10px ;
+    text-decoration: none;
+}
