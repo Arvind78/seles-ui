@@ -20,7 +20,7 @@ function RegistrationForm() {
     <div className="container bg-gray">
       <div className="row justify-content-center w-88">
         <h4 className="pt-3 text-center">REGISTRATION FORM</h4>
-        <form className="col-lg-8 col-md-8 col-sm-10 pb-3">
+        <form className="col-lg-8 col-md-8 col-sm-10 pb-3 shadow p-3 mb-5 bg-white rounded">
           <div className="form-group mt-1 mb-2">
             <label htmlFor="firstName" className="p-1" style={{ fontSize: '14px' }}>First Name</label>
             <input
