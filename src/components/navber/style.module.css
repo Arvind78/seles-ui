@@ -15,3 +15,13 @@ a{
     padding: 0px 10px ;
     text-decoration: none;
 }
+
+
+
+@media (max-width:990px) {
+    a{
+        color: rgba(231, 228, 228, 0.808);
+        padding: 10px 10px ;
+        text-decoration: none;
+    }
+}

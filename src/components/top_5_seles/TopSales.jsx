@@ -1,7 +1,17 @@
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import './TopSales.css'; // Import CSS file for styling
+import axios from "axios"
+import { useEffect, useState } from 'react';
 
 const TopSales = () => {
+  const [data,setData] = useState([]);
+
+  useEffect(()=>{
+    axios("http://localhost:8080/api/products").then((res) => {
+      setData(res.data.sales)
+    }).catch((err)=>{throw err})
+  },[])
+
   return (
     <Container>
       <Row className="justify-content-center">
@@ -17,20 +27,21 @@ const TopSales = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="font-size-cell"> 1 </td>
-                <td className="font-size-cell"> S1212 </td>
-                <td className="font-size-cell"> Laptop </td>
-                <td className="font-size-cell"> 2 </td>
-                <td className="font-size-cell"> 90000 </td>
+
+              { 
+              data.map((sales,index)=>(
+
+              <tr key={index}>
+                <td className="font-size-cell"> {index+1}</td>
+                <td className="font-size-cell">{sales.salesId} </td>
+                <td className="font-size-cell"> {sales.productName} </td>
+                <td className="font-size-cell"> {sales.quantity}</td>
+                <td className="font-size-cell"> {sales.amount} </td>
               </tr>
-              <tr>
-                <td className="font-size-cell"> 2 </td>
-                <td className="font-size-cell"> S1423 </td>
-                <td className="font-size-cell"> Mobile </td>
-                <td className="font-size-cell"> 5 </td>
-                <td className="font-size-cell"> 85000 </td>
-              </tr>
+
+              ))
+}
+
               {/* Add more rows as needed */}
             </tbody>
           </Table>
